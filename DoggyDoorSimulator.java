@@ -1,5 +1,3 @@
-import java.util.function.DoubleUnaryOperator;
-
 public class DoggyDoorSimulator {
     public static void main() {
         //Bark Recorder Test
