@@ -3,13 +3,12 @@ import java.util.List;
 public class BarkSensor {
 
     private DoggyDoor door;
-    private BarkRecorder recorder;
     private List<String> knownBarks;
     
 
     BarkSensor(DoggyDoor door, List<String> knownBarks) {
         this.door = door;
-        this.knownBarks = recorder.getList();
+        this.knownBarks = door.getList();
 
     }
 

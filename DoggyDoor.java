@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -7,6 +9,7 @@ public class DoggyDoor {
     private boolean scratch;
     private boolean openOnce;
     private boolean storeBark;
+    public List knownBarks = new ArrayList<String>();
 
     public DoggyDoor() {
         this.open = false;
@@ -14,6 +17,7 @@ public class DoggyDoor {
         this.scratch = false;
         this.openOnce = false;
         this.storeBark = false;
+        this.knownBarks = knownBarks;
     }
 
     public void open() {
@@ -88,6 +92,9 @@ public class DoggyDoor {
     }
     public boolean storeBarkOn() {
         return storeBark;
+    }
+    public List<String> getList() {
+        return knownBarks;
     }
 
 }

@@ -15,7 +15,7 @@ public class DoggyDoorSimulator {
         // DoggyDoor door = new DoggyDoor();
         Remote remote = new Remote(door);
         // BarkRecorder recorder = new BarkRecorder(door);
-        BarkSensor sensor = new BarkSensor(door,BarkRecorder.knownBarks);
+        BarkSensor sensor = new BarkSensor(door,door.knownBarks);
         System.out.println("Rari is Barking!");
         sensor.recognize("Woof, Woof!");
         if (!door.isOpen()){
