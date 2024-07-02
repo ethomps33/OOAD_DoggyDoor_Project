@@ -9,8 +9,7 @@ public class BarkSensor {
 
     BarkSensor(DoggyDoor door, List<String> knownBarks) {
         this.door = door;
-        this.recorder = recorder;
-        this.knownBarks = BarkRecorder.knownBarks;
+        this.knownBarks = recorder.getList();
 
     }
 

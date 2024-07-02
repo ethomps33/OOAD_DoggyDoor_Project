@@ -11,7 +11,7 @@ public class BarkRecorder {
 
     }
 
-    public List<String> geList() {
+    public static List<String> getList() {
         return knownBarks;
     }
 
