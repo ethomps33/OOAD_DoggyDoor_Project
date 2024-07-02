@@ -5,19 +5,21 @@ import java.util.TimerTask;
 
 public class DoggyDoor {
     private boolean open;
-    private boolean activated;
-    private boolean scratch;
-    private boolean openOnce;
+    // private boolean activated;
+    // private boolean scratch;
+    // private boolean openOnce;
     private boolean storeBark;
     public List knownBarks = new ArrayList<String>();
+    private boolean equals;
 
     public DoggyDoor() {
         this.open = false;
-        this.activated = false;
-        this.scratch = false;
-        this.openOnce = false;
+        // this.activated = false;
+        // this.scratch = false;
+        // this.openOnce = false;
         this.storeBark = false;
         this.knownBarks = knownBarks;
+        this.equals = false;
     }
 
     public void open() {
@@ -77,7 +79,15 @@ public class DoggyDoor {
                     storeBark = false;
                     timer.cancel();
                 }
-            }, 5000);
+            }, 3000);
+    }
+    public void equals(String bark) {
+        if (knownBarks.contains(bark)) {
+            open();
+        } else {
+            System.out.println("The Bark is not Recognized by the system.");
+            // door.close();
+        }
     }
     public boolean isOpen() {
         return open;
