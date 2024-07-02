@@ -13,8 +13,8 @@ public class BarkRecorder {
         if (door.storeBarkOn()) {
             System.out.println("The Bark Recorder is not activated.");
         } else {
-            door.storeBark();
-            door.knownBarks.add(bark);
+            door.storeBark(bark);
+            
         }
     }
 

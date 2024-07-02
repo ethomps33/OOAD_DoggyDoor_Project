@@ -52,22 +52,23 @@ public class DoggyDoor {
         System.out.println("The Doggy Door is Closed.");
         open = false;
     }
-    public void activated() {
-        System.out.println("The Doggy Door & Window Lock has been Activated.");
-        activated = true;
-        open = false;
-    }
-    public void deactivated() {
-        System.out.println("The Doggy Door & Window Lock has been Deactivated.");
-        activated = false;
-    }
-    public void scratch() {
-        System.out.println("The Doggy Door has been Scratch Activated.");
-        scratch = true;
-    }
-    public void storeBark(){
+    // public void activated() {
+    //     System.out.println("The Doggy Door & Window Lock has been Activated.");
+    //     activated = true;
+    //     open = false;
+    // }
+    // public void deactivated() {
+    //     System.out.println("The Doggy Door & Window Lock has been Deactivated.");
+    //     activated = false;
+    // }
+    // public void scratch() {
+    //     System.out.println("The Doggy Door has been Scratch Activated.");
+    //     scratch = true;
+    // }
+    public void storeBark(String bark){
         System.out.println("The Bark Recorder has been activated. Have your dog bark into the Doggy Door Sensor.");
         storeBark = true;
+        knownBarks.add(bark);
 
         final Timer timer = new Timer();
             timer.schedule(new TimerTask() {
@@ -81,15 +82,15 @@ public class DoggyDoor {
     public boolean isOpen() {
         return open;
     }
-    public boolean codeEntered() {
-        return activated;
-    }
-    public boolean scratchOn() {
-        return scratch;
-    }
-    public boolean openOnce() {
-        return openOnce;
-    }
+    // public boolean codeEntered() {
+    //     return activated;
+    // }
+    // public boolean scratchOn() {
+    //     return scratch;
+    // }
+    // public boolean openOnce() {
+    //     return openOnce;
+    // }
     public boolean storeBarkOn() {
         return storeBark;
     }
