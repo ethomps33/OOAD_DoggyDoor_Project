@@ -28,7 +28,8 @@ public class DoggyDoorSimulator {
             try {
                     Thread.currentThread().sleep(10000);
                 } catch (InterruptedException e) {}
-            System.out.println("Looks like the Rari is ready to come back in.");
+            sensor.recognize("Yipp, yipppp!!!");
+            System.out.println("Looks like Rari is ready to come back in.");
             System.out.println("But the door is closed...");
             System.out.println("Rari is Barking!");
             sensor.recognize("Ruff");
