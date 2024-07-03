@@ -68,24 +68,26 @@ public class DoggyDoor {
     //     scratch = true;
     // }
     public void storeBark(String bark){
-        System.out.println("The Bark Recorder has been activated. Have your dog bark into the Doggy Door Sensor.");
+        // System.out.println("The Bark Recorder has been activated. Have your dog bark into the Doggy Door Sensor.");
         storeBark = true;
         knownBarks.add(bark);
+        storeBark = false;
 
-        final Timer timer = new Timer();
-            timer.schedule(new TimerTask() {
-                public void run() {
-                    System.out.println("The Bark Recorder has finished recording the new bark and it can now be used with the System.");
-                    storeBark = false;
-                    timer.cancel();
-                }
-            }, 3000);
+        // final Timer timer = new Timer();
+        //     timer.schedule(new TimerTask() {
+        //         public void run() {
+        //             System.out.println("The Bark Recorder has finished recording the new bark and it can now be used with the System.");
+        //             storeBark = false;
+        //             timer.cancel();
+        //         }
+        //     }, 3000);
     }
     public void equals(String bark) {
         if (knownBarks.contains(bark)) {
+            System.out.println("The Bark Sensor heard " + bark + ". Bark Recognized.");
             open();
         } else {
-            System.out.println("The Bark is not Recognized by the system.");
+            System.out.println("The Bark Sensor heard " + bark + ". The Bark is not Recognized by the system.");
             // door.close();
         }
     }

@@ -5,15 +5,17 @@ public class DoggyDoorSimulator {
         DoggyDoor door = new DoggyDoor();
         BarkRecorder recorder = new BarkRecorder(door);
         recorder.record("Woof, Woof!");
-        System.out.println("Rari has barked.");
+        recorder.record("Bow Wow!");
+        recorder.record("Ruff");
+        // System.out.println("Rari has barked.");
 
-        try {
-            Thread.currentThread().sleep(10000);
-        } catch (InterruptedException e) {}
+        // try {
+        //     Thread.currentThread().sleep(5000);
+        // } catch (InterruptedException e) {}
 
         // The Doggy Door in it's Original Barking state
         // DoggyDoor door = new DoggyDoor();
-        Remote remote = new Remote(door);
+        // Remote remote = new Remote(door);
         // BarkRecorder recorder = new BarkRecorder(door);
         BarkSensor sensor = new BarkSensor(door,door.knownBarks);
         System.out.println("Rari is Barking!");
@@ -29,7 +31,7 @@ public class DoggyDoorSimulator {
             System.out.println("Looks like the Rari is ready to come back in.");
             System.out.println("But the door is closed...");
             System.out.println("Rari is Barking!");
-            sensor.recognize("Woof, Woof!");
+            sensor.recognize("Ruff");
             if (!door.isOpen()){
                 System.out.println("The Doggy Door did not open.");
                 }
